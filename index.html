@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生命靈數 免費算</title>
+</head>
+
+    <script>
+        function life()
+        {
+        var gt=prompt('請輸入生日 \n例:20201010');
+        //var c=confirm('輸入正確?');
+
+
+
+        var a=Array.from(String(gt),Number);
+        
+        var temp=0;
+        for(var i=0;i<=a.length;i++)
+        {
+            temp+=a[i];
+            if(i==7 && temp<10)
+            {
+                alert('您是'+temp+'號人');
+                break;
+            }else if(i==7 && temp>10)
+            {   
+                var array=Array.from(String(temp),Number);
+                var a1=array[0];
+                var a2=array[1];
+                var sum1=a1+a2;
+
+                if(sum1<10)
+                {
+                    alert('您是'+sum1+'號人');
+                    break;
+                }
+                else
+                {
+                    var array2=Array.from(String(sum1),Number);
+                    var b1=array2[0];
+                    var b2=array2[1];
+                    var sum2=b1+b2;
+                    alert('您是'+sum2+'號人');
+                    break;
+                }
+                
+            }
+        } 
+                     
+        
+
+        }
+
+    </script>
+<body>
+    <h1><button onclick="life()">計算</button></h1>
+</body>
+</html>
